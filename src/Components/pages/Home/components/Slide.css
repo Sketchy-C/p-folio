@@ -1,0 +1,57 @@
+.slide-track {
+  animation: slide 20s linear infinite;
+  width: fit-content;
+}
+
+.logo {
+  height: 100px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logo:hover {
+  filter: grayscale(0%);
+}
+
+/* Responsive: Smaller logo on small screens */
+@media (max-width: 768px) {
+  .logo {
+    height: 80px;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Tooltip animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.custom-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Place at bottom of the tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: orange transparent transparent transparent;
+}
