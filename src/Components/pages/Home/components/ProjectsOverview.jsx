@@ -35,12 +35,9 @@ function ProjectsOverview() {
                         extensions and custom software tools, all designed with performance and
                         scalability in mind.
                     </p>
-                    <a
-                        href="#projects-page"
-                        className="inline-block bg-orange-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-300"
-                    >
-                        Visit Project Page →
-                    </a>
+                    <button className="border-gray-100 bg-orange-500 hover:bg-orange-600 font-semibold py-3 px-6 rounded-lg transition duration-300 w-full sm:w-auto">
+                        Visit Project Page  →
+                    </button>
                 </div>
 
                 {/* Right Side - Slideshow */}
