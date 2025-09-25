@@ -6,7 +6,7 @@ function ProjectsOverview() {
     "./images/fuel.webp",
     "./images/wms.png",
     "./images/stacks.png",
-    "./images/project5.jpg",
+    "./images/tc26.jpeg",
   ];
 
   const [current, setCurrent] = useState(0);
