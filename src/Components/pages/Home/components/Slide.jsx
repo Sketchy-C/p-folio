@@ -52,7 +52,7 @@ function Slide() {
 
                 {/* Logo Track */}
                 <div
-                    className="slide-track flex gap-10 items-center cursor-pointer px-4"
+                    className="slide-track flex gap-10 items-center cursor-pointer px-4 logo-gray"
                 >
                     {[...Array(2)].map((_, i) => (
                         <React.Fragment key={i}>
