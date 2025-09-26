@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NetworkIcon } from "../../../UI/Icons";
 
 function ProjectsOverview() {
     const images = [
@@ -27,7 +28,7 @@ function ProjectsOverview() {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
                 {/* Left Side - Text */}
                 <div className="flex-1">
-                    <h2 className="text-4xl font-bold text-orange-500 mb-6">Projects Overview</h2>
+                    <h2 className="flex gap-2 text-4xl font-bold text-orange-500 mb-6"><NetworkIcon/> Projects Overview</h2>
                     <p className="text-slate-300 leading-relaxed mb-8">
                         I specialize in building powerful full-stack applications, integrating
                         technologies such as RFID, GPS, GSM, and automation tools. My projects

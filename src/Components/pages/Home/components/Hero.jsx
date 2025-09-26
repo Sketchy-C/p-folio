@@ -28,17 +28,14 @@ function Hero() {
                 <div className="sm:text-sm text-white mt-6 flex flex-col items-start gap-2">
                     <p>Trace my signals:</p>
                     <div className="flex gap-4">
-                        <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/Sketchy-C" target="_blank" rel="noopener noreferrer">
                             <FaGithub className="text-white text-2xl hover:text-orange-400 transition duration-300" />
                         </a>
-                        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/wilson-sam-63b539343/" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin className="text-white text-2xl hover:text-orange-400 transition duration-300" />
                         </a>
-                        <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer">
+                        <a href="https://x.com/Sketchy_C_001" target="_blank" rel="noopener noreferrer">
                             <FaTwitter className="text-white text-2xl hover:text-orange-400 transition duration-300" />
-                        </a>
-                        <a href="https://www.instagram.com/your-instagram" target="_blank" rel="noopener noreferrer">
-                            <FaInstagram className="text-white text-2xl hover:text-orange-400 transition duration-300" />
                         </a>
                     </div>
                 </div>
