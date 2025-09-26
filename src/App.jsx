@@ -17,6 +17,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <Navbar />
+      
 
       {/* Page routes */}
       <div className='min-h-screen'>

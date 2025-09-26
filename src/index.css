@@ -63,3 +63,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+ul li {
+  padding: 1.2rem 1rem;
+}
