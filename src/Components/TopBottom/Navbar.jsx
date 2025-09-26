@@ -35,16 +35,21 @@ function Navbar() {
       id: "page",
       label: "Contact Page",
       content: (
-        <div className="text-gray-100">
-          <p className="mb-3 max-w-md">
-            Reach out for collaborations, freelance opportunities, or just to connect!
-          </p>
-          <button
-            onClick={() => navigate("/contact")}
-            className="text-orange-400 underline"
-          >
-            View Contact Page →
-          </button>
+        <div className="text-gray-100 flex">
+          <div>
+            <p className="mb-3 max-w-md">
+              Reach out for collaborations, freelance opportunities, or just to connect!
+            </p>
+            <button
+              onClick={() => navigate("/contact")}
+              className="text-orange-400 underline"
+            >
+              View Contact Page →
+            </button>
+          </div>
+          <div>
+            <img src="./images/pfp.jpg" alt="" className="h-30 w-30 object-cover rounded-full opacity-70" />
+          </div>
         </div>
       ),
     },
