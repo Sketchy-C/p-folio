@@ -48,7 +48,7 @@ function Navbar() {
             </button>
           </div>
           <div>
-            <img src="./images/pfp.jpg" alt="" className="h-30 w-30 object-cover rounded-full opacity-70" />
+            <img src="./images/pfp1.jpg" alt="" className="h-30 w-30 object-cover rounded-full opacity-70" />
           </div>
         </div>
       ),
@@ -61,18 +61,18 @@ function Navbar() {
           {[
             {
               title: "GitHub",
-              icon: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-              link: "https://github.com/yourusername",
+              icon: "./images/git.png",
+              link: "https://github.com/Sketchy-C",
             },
             {
-              title: "Twitter",
-              icon: "https://abs.twimg.com/icons/apple-touch-icon-192x192.png",
-              link: "https://twitter.com/yourhandle",
+              title: "X",
+              icon: "./images/X.jpg",
+              link: "https://x.com/Sketchy_C_001",
             },
             {
               title: "LinkedIn",
-              icon: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-              link: "https://linkedin.com/in/yourprofile",
+              icon: "./images/linkedin.ico",
+              link: "https://www.linkedin.com/in/wilson-sam-63b539343/",
             },
           ].map(({ title, icon, link }) => (
             <a
