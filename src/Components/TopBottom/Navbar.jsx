@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Blur from "../useCases/Blur";
 import TargetCursor from "../useCases/TargetCursor";
+import InfiniteScroll from "../useCases/InfiniteScroll";
+import scrollItems from "./InfinitescrollItems";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // for mobile
@@ -29,6 +31,8 @@ function Navbar() {
       : "hover:text-orange-400";
   };
 
+  //Infinite scroll items
+  const items = scrollItems;
 
   // Data for content and slides
   const contactTabs = [
@@ -59,10 +63,10 @@ function Navbar() {
       label: "Quick Links",
       content: (
         <div className="flex gap-4">
-              <TargetCursor
-                spinDuration={2}
-                hideDefaultCursor={true}
-              />
+          <TargetCursor
+            spinDuration={2}
+            hideDefaultCursor={true}
+          />
           {[
             {
               title: "GitHub",
@@ -102,11 +106,23 @@ function Navbar() {
       id: "overview",
       label: "General Overview",
       content: (
-        <p className="text-gray-100 max-w-md">
-          I have a strong background in full-stack development, embedded integrations,
-          and automation. My toolkit includes both software and hardware interfacing,
-          giving me a holistic problem-solving approach.
-        </p>
+        <div>
+          <p className="text-gray-100 max-w-md">
+            I have a strong background in full-stack development, embedded integrations,
+            and automation.
+          </p>
+          <div style={{ height: '200px', position: 'relative' }}>
+            <InfiniteScroll
+              items={items}
+              isTilted={true}
+              tiltDirection='left'
+              autoplay={true}
+              autoplaySpeed={0.9}
+              autoplayDirection="down"
+              pauseOnHover={true}
+            />
+          </div>
+        </div>
       ),
     },
     {
@@ -114,10 +130,10 @@ function Navbar() {
       label: "Experience",
       content: (
         <div className="flex gap-4">
-              <TargetCursor
-                spinDuration={2}
-                hideDefaultCursor={true}
-              />
+          <TargetCursor
+            spinDuration={2}
+            hideDefaultCursor={true}
+          />
           {["Software", "Embedded Integration", "Scripting"].map((type) => (
             <div
               key={type}
@@ -207,10 +223,10 @@ function Navbar() {
       label: "Latest Focus",
       content: (
         <div className="flex gap-4">
-              <TargetCursor
-                spinDuration={2}
-                hideDefaultCursor={true}
-              />
+          <TargetCursor
+            spinDuration={2}
+            hideDefaultCursor={true}
+          />
           {[1, 2, 3].map((num) => (
             <div
               key={num}
@@ -231,10 +247,10 @@ function Navbar() {
       label: "MVPs",
       content: (
         <div className="flex gap-4">
-              <TargetCursor
-                spinDuration={2}
-                hideDefaultCursor={true}
-              />
+          <TargetCursor
+            spinDuration={2}
+            hideDefaultCursor={true}
+          />
           {[1, 2, 3].map((num) => (
             <div
               key={num}
