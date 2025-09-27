@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Blur from "../useCases/Blur";
+import TargetCursor from "../useCases/TargetCursor";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // for mobile
@@ -58,6 +59,10 @@ function Navbar() {
       label: "Quick Links",
       content: (
         <div className="flex gap-4">
+              <TargetCursor
+                spinDuration={2}
+                hideDefaultCursor={true}
+              />
           {[
             {
               title: "GitHub",
@@ -80,10 +85,10 @@ function Navbar() {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-800 hover:bg-gray-700 transition-colors rounded-md p-4 w-40 shadow-lg flex flex-col items-center"
+              className="bg-gray-800 hover:bg-gray-700 transition-colors rounded-md p-4 w-40 shadow-lg flex flex-col items-center cursor-target"
             >
               <img src={icon} alt={title} className="w-8 h-8 mb-2" />
-              <h3 className="text-orange-400 mb-1">{title}</h3>
+              <h3 className="text-orange-400 mb-1 ">{title}</h3>
               <p className="text-gray-200 text-sm text-center">Visit my {title}</p>
             </a>
           ))}
@@ -109,10 +114,14 @@ function Navbar() {
       label: "Experience",
       content: (
         <div className="flex gap-4">
+              <TargetCursor
+                spinDuration={2}
+                hideDefaultCursor={true}
+              />
           {["Software", "Embedded Integration", "Scripting"].map((type) => (
             <div
               key={type}
-              className="bg-gray-800 rounded-md p-4 w-40 shadow-lg"
+              className="bg-gray-800 rounded-md p-4 w-40 shadow-lg cursor-target"
             >
               <h3 className="text-orange-400 mb-2">{type}</h3>
               <p className="text-gray-200 text-sm">
@@ -198,10 +207,14 @@ function Navbar() {
       label: "Latest Focus",
       content: (
         <div className="flex gap-4">
+              <TargetCursor
+                spinDuration={2}
+                hideDefaultCursor={true}
+              />
           {[1, 2, 3].map((num) => (
             <div
               key={num}
-              className="bg-gray-800 rounded-md p-4 w-40 shadow-lg"
+              className="bg-gray-800 rounded-md p-4 w-40 shadow-lg cursor-target"
             >
               <h3 className="text-orange-400 mb-2">Project {num}</h3>
               <p className="text-gray-200 text-sm">
@@ -218,10 +231,14 @@ function Navbar() {
       label: "MVPs",
       content: (
         <div className="flex gap-4">
+              <TargetCursor
+                spinDuration={2}
+                hideDefaultCursor={true}
+              />
           {[1, 2, 3].map((num) => (
             <div
               key={num}
-              className="bg-gray-800 rounded-md p-4 w-40 shadow-lg"
+              className="bg-gray-800 rounded-md p-4 w-40 shadow-lg cursor-target"
             >
               <h3 className="text-orange-400 mb-2">Fav Project {num}</h3>
               <p className="text-gray-200 text-sm">
@@ -245,7 +262,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#242424] text-gray-50 px-6 py-3 shadow-md backdrop-blur-sm">
+    <nav className="sticky top-0 z-50 bg-[#242424] text-gray-50 px-6 py-3 shadow-md backdrop-blur-sm cursor-pointer">
       <div className="flex justify-between items-center max-w-6xl mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-2">

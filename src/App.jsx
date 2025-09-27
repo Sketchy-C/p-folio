@@ -20,7 +20,7 @@ function App() {
       
 
       {/* Page routes */}
-      <div className='min-h-screen'>
+      <div className='min-h-screen cursor-pointer'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />

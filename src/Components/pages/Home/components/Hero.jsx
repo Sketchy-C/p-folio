@@ -5,6 +5,7 @@ function Hero() {
     return (
         <div className='z-10 flex flex-col-reverse md:flex-row justify-between items-center max-w-6xl mx-auto w-full px-6 min-h-[70vh] gap-10'>
             {/* Left: Text Content */}
+            
             <div className="max-w-xl text-left">
                 <h1 className="text-4xl font-bold leading-snug text-white flex flex-wrap gap-x-2">
                     <span className="text-orange-500 text-md">Wilson Samuel</span>
